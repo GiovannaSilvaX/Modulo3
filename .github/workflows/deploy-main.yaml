@@ -19,6 +19,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Build Maven
+        run: mvn clean package -DskipTests
+
       - name: Build Imagem
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/modulo-3:latest .
 
