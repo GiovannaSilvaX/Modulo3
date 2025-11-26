@@ -1,4 +1,4 @@
-FROM amazoncorretto:17-alpine3.15
+FROM maven:3.9.9-eclipse-temurin-21-alpine AS build
 LABEL MANTAINER="GiovannaS28"
 
 WORKDIR /app
